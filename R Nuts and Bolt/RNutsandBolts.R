@@ -37,6 +37,9 @@ y
 table(y)
 unclass(y)
 
+
+z <-- 12
+
 x<- c(1,2,NA,10,3)
 is.na(x)
 is.nan(x)
@@ -137,3 +140,44 @@ x<- matrix(1:4,2,2); y<- matrix(rep(10,4),2,2)
 x*y
 x/y
 x%*%y
+
+z <-12
+class(z)
+z<- c(12,FALSE)
+class(z)
+m <- c(10,13, 15, 33)
+n <- c(13, 22, 88, 110)
+rbind(m, n)
+z <- list(22, "a", "c", FALSE)
+z[[2]]
+z <- 10:40
+y <- 3
+z + y
+x <- c(117, 114, 14, 15, 113, 112, 110)
+x[x >=100]<- 14
+x
+
+names(hw1_data)
+airquality[1:12,]
+nrow(hw1_data)
+ncol(hw1_data)
+airquality[145:153,]
+hw1_data[145:153]
+tail(hw1_data,8)
+hw1_data[1:12,]
+nrow(hw1_data)
+hw1_data[112,3]
+hw1_data[42,4]
+hw1_data[82,2]
+sum(is.na(hw1_data))
+sum(is.na(hw1_data[1:153,1]))
+sum(is.na(hw1_data[1:153,2]))
+sum(is.na(hw1_data[1:153,3]))
+sum(is.na(hw1_data[1:153,4]))
+
+apply(subset(hw1_data, !is.na(Ozone), select=Ozone),2,mean)
+apply(subset(hw1_data, !is.na(Wind), select=Wind),2,mean)
+apply(subset(hw1_data, !is.na(Temp), select=Temp),2,mean)
+sub = subset(hw1_data,Ozone > 26 & temp > 80, select = Solar.R)
+apply
+
